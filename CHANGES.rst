@@ -24,6 +24,20 @@
 Changes
 =======
 
+Version 0.3.0 (released 2015-10-01)
+-----------------------------------
+
+Incompatible changes
+~~~~~~~~~~~~~~~~~~~~
+
+- Removes record related tasks in favor of `invenio-records`.
+
+Bug fixes
+~~~~~~~~~
+
+- Replaces if statement by try...except block to check if a model
+  has a mixer associated with it.
+
 Version 0.2.1 (released 2015-09-23)
 -----------------------------------
 
