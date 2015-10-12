@@ -63,6 +63,7 @@ requirements = [
     'intbitset>=2.0.0',
     'invenio-base>=0.3.1',
     'invenio-celery>=0.1.1',
+    'invenio-records>=0.3.4.post1',
     'invenio-utils>=0.2.0',
     'lxml>=3.3',
     # FIXME new oauthlib release after 0.7.2 has some compatible problems with
@@ -84,7 +85,6 @@ test_requirements = [
     'invenio-access>=0.2.0',
     'invenio-accounts>=0.2.0',
     'invenio-collections>=0.2.0',
-    'invenio-records>=0.3.4.post1',
     'invenio-oauth2server>=0.2.0',
     'invenio-testing>=0.1.1',
     'mock>=1.0.1',
