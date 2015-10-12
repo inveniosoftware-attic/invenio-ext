@@ -22,9 +22,11 @@
 from __future__ import unicode_literals
 
 from flask import abort, current_app
+
 from flask_admin import AdminIndexView as FlaskAdminIndexView
 from flask_admin import BaseView as FlaskBaseView
 from flask_admin.contrib.sqla import ModelView as FlaskModelView
+
 from flask_login import current_user
 
 from invenio_ext.principal import permission_required
@@ -33,7 +35,6 @@ from invenio_ext.sslify import ssl_required
 
 def can_acc_action(action):
     """Return getter/setter for can_<action> properties."""
-
     def fget(self):
         return self.acc_authorize(action)
 
@@ -68,7 +69,7 @@ class BaseView(FlaskBaseView):
         if action:
             return permission_required(action)
         else:
-            return current_user.is_super_admin
+            return current_user.is_superadmin
 
     def _handle_view(self, name, **kwargs):
         """The method will be executed before calling any view method."""

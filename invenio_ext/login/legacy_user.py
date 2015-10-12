@@ -20,10 +20,12 @@
 """Provide support for legacy UserInfo object."""
 
 from flask import current_app, has_request_context, request, session
+
 from flask_login import UserMixin
-from werkzeug.datastructures import CallbackDict, CombinedMultiDict
 
 from invenio_ext.cache import cache
+
+from werkzeug.datastructures import CallbackDict, CombinedMultiDict
 
 __all__ = ('UserInfo', )
 
@@ -297,7 +299,7 @@ class UserInfo(CombinedMultiDict, UserMixin):
         return self.get('precached_useadmin', False)
 
     @property
-    def is_super_admin(self):
+    def is_superadmin(self):
         """Check if user is super admin."""
         return self.get('precached_usesuperadmin', False)
 
