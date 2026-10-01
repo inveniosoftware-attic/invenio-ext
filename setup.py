@@ -66,7 +66,7 @@ requirements = [
     'lxml>=3.3',
     # FIXME new oauthlib release after 0.7.2 has some compatible problems with
     # the used Flask-Oauthlib version.
-    'oauthlib==0.7.2',
+    'oauthlib==4.0.0',
     'passlib>=1.6.2',
     'python-dateutil>=1.5',
     'raven>=5.0.0',
